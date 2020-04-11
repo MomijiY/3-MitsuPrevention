@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79383500243FE6D200C816AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793834FF243FE6D200C816AC /* AppDelegate.swift */; };
+		79383505243FE6D200C816AC /* __MitsuPrevention.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79383503243FE6D200C816AC /* __MitsuPrevention.xcdatamodeld */; };
+		79383509243FE6D300C816AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79383508243FE6D300C816AC /* Assets.xcassets */; };
+		7938350C243FE6D300C816AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7938350B243FE6D300C816AC /* Preview Assets.xcassets */; };
+		7938350F243FE6D300C816AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7938350D243FE6D300C816AC /* LaunchScreen.storyboard */; };
+		7938351A243FE6D400C816AC /* __MitsuPreventionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383519243FE6D400C816AC /* __MitsuPreventionTests.swift */; };
+		79383525243FE6D400C816AC /* __MitsuPreventionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383524243FE6D400C816AC /* __MitsuPreventionUITests.swift */; };
+		79383535243FE6FE00C816AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79383534243FE6FE00C816AC /* Main.storyboard */; };
+		79383537243FEF8C00C816AC /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383536243FEF8C00C816AC /* VideoCapture.swift */; };
+		79383547243FF05300C816AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383546243FF05300C816AC /* SceneDelegate.swift */; };
+		79383555243FF12E00C816AC /* FaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383554243FF12E00C816AC /* FaceDetectionViewController.swift */; };
+		7938355B243FF19000C816AC /* FaceRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7938355A243FF19000C816AC /* FaceRecognition.mlmodel */; };
+		7938355D243FF19F00C816AC /* model_face_omar_turi.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7938355C243FF19F00C816AC /* model_face_omar_turi.mlmodel */; };
+		7938355F243FFB2A00C816AC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7938355E243FFB2A00C816AC /* Info.plist */; };
+		793835632440102D00C816AC /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793835622440102C00C816AC /* UIcolor.swift */; };
+		793835652440108A00C816AC /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793835642440108A00C816AC /* DrawingBoundingBoxView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79383516243FE6D400C816AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 793834F4243FE6D200C816AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 793834FB243FE6D200C816AC;
+			remoteInfo = "3-MitsuPrevention";
+		};
+		79383521243FE6D400C816AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 793834F4243FE6D200C816AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 793834FB243FE6D200C816AC;
+			remoteInfo = "3-MitsuPrevention";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		793834FC243FE6D200C816AC /* 3-MitsuPrevention.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3-MitsuPrevention.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		793834FF243FE6D200C816AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79383504243FE6D200C816AC /* __MitsuPrevention.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = __MitsuPrevention.xcdatamodel; sourceTree = "<group>"; };
+		79383508243FE6D300C816AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7938350B243FE6D300C816AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7938350E243FE6D300C816AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79383515243FE6D400C816AC /* 3-MitsuPreventionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3-MitsuPreventionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79383519243FE6D400C816AC /* __MitsuPreventionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __MitsuPreventionTests.swift; sourceTree = "<group>"; };
+		7938351B243FE6D400C816AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79383520243FE6D400C816AC /* 3-MitsuPreventionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3-MitsuPreventionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79383524243FE6D400C816AC /* __MitsuPreventionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __MitsuPreventionUITests.swift; sourceTree = "<group>"; };
+		79383526243FE6D400C816AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79383534243FE6FE00C816AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		79383536243FEF8C00C816AC /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		79383546243FF05300C816AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		79383554243FF12E00C816AC /* FaceDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionViewController.swift; sourceTree = "<group>"; };
+		7938355A243FF19000C816AC /* FaceRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceRecognition.mlmodel; sourceTree = "<group>"; };
+		7938355C243FF19F00C816AC /* model_face_omar_turi.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model_face_omar_turi.mlmodel; sourceTree = "<group>"; };
+		7938355E243FFB2A00C816AC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		793835622440102C00C816AC /* UIcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
+		793835642440108A00C816AC /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		793834F9243FE6D200C816AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79383512243FE6D400C816AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7938351D243FE6D400C816AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793834F3243FE6D200C816AC = {
+			isa = PBXGroup;
+			children = (
+				793834FE243FE6D200C816AC /* 3-MitsuPrevention */,
+				79383518243FE6D400C816AC /* 3-MitsuPreventionTests */,
+				79383523243FE6D400C816AC /* 3-MitsuPreventionUITests */,
+				793834FD243FE6D200C816AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		793834FD243FE6D200C816AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				793834FC243FE6D200C816AC /* 3-MitsuPrevention.app */,
+				79383515243FE6D400C816AC /* 3-MitsuPreventionTests.xctest */,
+				79383520243FE6D400C816AC /* 3-MitsuPreventionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		793834FE243FE6D200C816AC /* 3-MitsuPrevention */ = {
+			isa = PBXGroup;
+			children = (
+				7938358424407D2600C816AC /* swift */,
+				793834FF243FE6D200C816AC /* AppDelegate.swift */,
+				79383546243FF05300C816AC /* SceneDelegate.swift */,
+				79383554243FF12E00C816AC /* FaceDetectionViewController.swift */,
+				7938355A243FF19000C816AC /* FaceRecognition.mlmodel */,
+				7938355C243FF19F00C816AC /* model_face_omar_turi.mlmodel */,
+				79383508243FE6D300C816AC /* Assets.xcassets */,
+				79383534243FE6FE00C816AC /* Main.storyboard */,
+				7938350D243FE6D300C816AC /* LaunchScreen.storyboard */,
+				7938355E243FFB2A00C816AC /* Info.plist */,
+				79383503243FE6D200C816AC /* __MitsuPrevention.xcdatamodeld */,
+				7938350A243FE6D300C816AC /* Preview Content */,
+			);
+			path = "3-MitsuPrevention";
+			sourceTree = "<group>";
+		};
+		7938350A243FE6D300C816AC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7938350B243FE6D300C816AC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		79383518243FE6D400C816AC /* 3-MitsuPreventionTests */ = {
+			isa = PBXGroup;
+			children = (
+				79383519243FE6D400C816AC /* __MitsuPreventionTests.swift */,
+				7938351B243FE6D400C816AC /* Info.plist */,
+			);
+			path = "3-MitsuPreventionTests";
+			sourceTree = "<group>";
+		};
+		79383523243FE6D400C816AC /* 3-MitsuPreventionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79383524243FE6D400C816AC /* __MitsuPreventionUITests.swift */,
+				79383526243FE6D400C816AC /* Info.plist */,
+			);
+			path = "3-MitsuPreventionUITests";
+			sourceTree = "<group>";
+		};
+		7938358424407D2600C816AC /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				79383536243FEF8C00C816AC /* VideoCapture.swift */,
+				793835642440108A00C816AC /* DrawingBoundingBoxView.swift */,
+				793835622440102C00C816AC /* UIcolor.swift */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		793834FB243FE6D200C816AC /* 3-MitsuPrevention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79383529243FE6D400C816AC /* Build configuration list for PBXNativeTarget "3-MitsuPrevention" */;
+			buildPhases = (
+				793834F8243FE6D200C816AC /* Sources */,
+				793834F9243FE6D200C816AC /* Frameworks */,
+				793834FA243FE6D200C816AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3-MitsuPrevention";
+			productName = "3-MitsuPrevention";
+			productReference = 793834FC243FE6D200C816AC /* 3-MitsuPrevention.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79383514243FE6D400C816AC /* 3-MitsuPreventionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7938352C243FE6D400C816AC /* Build configuration list for PBXNativeTarget "3-MitsuPreventionTests" */;
+			buildPhases = (
+				79383511243FE6D400C816AC /* Sources */,
+				79383512243FE6D400C816AC /* Frameworks */,
+				79383513243FE6D400C816AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79383517243FE6D400C816AC /* PBXTargetDependency */,
+			);
+			name = "3-MitsuPreventionTests";
+			productName = "3-MitsuPreventionTests";
+			productReference = 79383515243FE6D400C816AC /* 3-MitsuPreventionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7938351F243FE6D400C816AC /* 3-MitsuPreventionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7938352F243FE6D400C816AC /* Build configuration list for PBXNativeTarget "3-MitsuPreventionUITests" */;
+			buildPhases = (
+				7938351C243FE6D400C816AC /* Sources */,
+				7938351D243FE6D400C816AC /* Frameworks */,
+				7938351E243FE6D400C816AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79383522243FE6D400C816AC /* PBXTargetDependency */,
+			);
+			name = "3-MitsuPreventionUITests";
+			productName = "3-MitsuPreventionUITests";
+			productReference = 79383520243FE6D400C816AC /* 3-MitsuPreventionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		793834F4243FE6D200C816AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = com.litech;
+				TargetAttributes = {
+					793834FB243FE6D200C816AC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					79383514243FE6D400C816AC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 793834FB243FE6D200C816AC;
+					};
+					7938351F243FE6D400C816AC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 793834FB243FE6D200C816AC;
+					};
+				};
+			};
+			buildConfigurationList = 793834F7243FE6D200C816AC /* Build configuration list for PBXProject "3-MitsuPrevention" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 793834F3243FE6D200C816AC;
+			productRefGroup = 793834FD243FE6D200C816AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				793834FB243FE6D200C816AC /* 3-MitsuPrevention */,
+				79383514243FE6D400C816AC /* 3-MitsuPreventionTests */,
+				7938351F243FE6D400C816AC /* 3-MitsuPreventionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		793834FA243FE6D200C816AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7938350F243FE6D300C816AC /* LaunchScreen.storyboard in Resources */,
+				7938350C243FE6D300C816AC /* Preview Assets.xcassets in Resources */,
+				79383509243FE6D300C816AC /* Assets.xcassets in Resources */,
+				7938355F243FFB2A00C816AC /* Info.plist in Resources */,
+				79383535243FE6FE00C816AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79383513243FE6D400C816AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7938351E243FE6D400C816AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		793834F8243FE6D200C816AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7938355B243FF19000C816AC /* FaceRecognition.mlmodel in Sources */,
+				79383537243FEF8C00C816AC /* VideoCapture.swift in Sources */,
+				79383500243FE6D200C816AC /* AppDelegate.swift in Sources */,
+				7938355D243FF19F00C816AC /* model_face_omar_turi.mlmodel in Sources */,
+				79383505243FE6D200C816AC /* __MitsuPrevention.xcdatamodeld in Sources */,
+				79383555243FF12E00C816AC /* FaceDetectionViewController.swift in Sources */,
+				79383547243FF05300C816AC /* SceneDelegate.swift in Sources */,
+				793835632440102D00C816AC /* UIcolor.swift in Sources */,
+				793835652440108A00C816AC /* DrawingBoundingBoxView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79383511243FE6D400C816AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7938351A243FE6D400C816AC /* __MitsuPreventionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7938351C243FE6D400C816AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79383525243FE6D400C816AC /* __MitsuPreventionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79383517243FE6D400C816AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 793834FB243FE6D200C816AC /* 3-MitsuPrevention */;
+			targetProxy = 79383516243FE6D400C816AC /* PBXContainerItemProxy */;
+		};
+		79383522243FE6D400C816AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 793834FB243FE6D200C816AC /* 3-MitsuPrevention */;
+			targetProxy = 79383521243FE6D400C816AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7938350D243FE6D300C816AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7938350E243FE6D300C816AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79383527243FE6D400C816AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79383528243FE6D400C816AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7938352A243FE6D400C816AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"3-MitsuPrevention/Preview Content\"";
+				DEVELOPMENT_TEAM = PS62975MFX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "3-MitsuPrevention/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPrevention";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7938352B243FE6D400C816AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"3-MitsuPrevention/Preview Content\"";
+				DEVELOPMENT_TEAM = PS62975MFX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "3-MitsuPrevention/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPrevention";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7938352D243FE6D400C816AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "3-MitsuPreventionTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPreventionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3-MitsuPrevention.app/3-MitsuPrevention";
+			};
+			name = Debug;
+		};
+		7938352E243FE6D400C816AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "3-MitsuPreventionTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPreventionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3-MitsuPrevention.app/3-MitsuPrevention";
+			};
+			name = Release;
+		};
+		79383530243FE6D400C816AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "3-MitsuPreventionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPreventionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "3-MitsuPrevention";
+			};
+			name = Debug;
+		};
+		79383531243FE6D400C816AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "3-MitsuPreventionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPreventionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "3-MitsuPrevention";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		793834F7243FE6D200C816AC /* Build configuration list for PBXProject "3-MitsuPrevention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79383527243FE6D400C816AC /* Debug */,
+				79383528243FE6D400C816AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79383529243FE6D400C816AC /* Build configuration list for PBXNativeTarget "3-MitsuPrevention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7938352A243FE6D400C816AC /* Debug */,
+				7938352B243FE6D400C816AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7938352C243FE6D400C816AC /* Build configuration list for PBXNativeTarget "3-MitsuPreventionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7938352D243FE6D400C816AC /* Debug */,
+				7938352E243FE6D400C816AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7938352F243FE6D400C816AC /* Build configuration list for PBXNativeTarget "3-MitsuPreventionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79383530243FE6D400C816AC /* Debug */,
+				79383531243FE6D400C816AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		79383503243FE6D200C816AC /* __MitsuPrevention.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				79383504243FE6D200C816AC /* __MitsuPrevention.xcdatamodel */,
+			);
+			currentVersion = 79383504243FE6D200C816AC /* __MitsuPrevention.xcdatamodel */;
+			path = __MitsuPrevention.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 793834F4243FE6D200C816AC /* Project object */;
+}
