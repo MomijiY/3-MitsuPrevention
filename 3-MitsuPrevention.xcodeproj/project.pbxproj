@@ -18,11 +18,10 @@
 		79383537243FEF8C00C816AC /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383536243FEF8C00C816AC /* VideoCapture.swift */; };
 		79383547243FF05300C816AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383546243FF05300C816AC /* SceneDelegate.swift */; };
 		79383555243FF12E00C816AC /* FaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79383554243FF12E00C816AC /* FaceDetectionViewController.swift */; };
-		7938355B243FF19000C816AC /* FaceRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7938355A243FF19000C816AC /* FaceRecognition.mlmodel */; };
-		7938355D243FF19F00C816AC /* model_face_omar_turi.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7938355C243FF19F00C816AC /* model_face_omar_turi.mlmodel */; };
-		7938355F243FFB2A00C816AC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7938355E243FFB2A00C816AC /* Info.plist */; };
 		793835632440102D00C816AC /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793835622440102C00C816AC /* UIcolor.swift */; };
 		793835652440108A00C816AC /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793835642440108A00C816AC /* DrawingBoundingBoxView.swift */; };
+		7967400224449529005AB12A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7967400424449529005AB12A /* Localizable.strings */; };
+		798472482442D7FF008B9076 /* ThreeMitsu.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 798472472442D7FF008B9076 /* ThreeMitsu.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +58,13 @@
 		79383536243FEF8C00C816AC /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		79383546243FF05300C816AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		79383554243FF12E00C816AC /* FaceDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionViewController.swift; sourceTree = "<group>"; };
-		7938355A243FF19000C816AC /* FaceRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceRecognition.mlmodel; sourceTree = "<group>"; };
-		7938355C243FF19F00C816AC /* model_face_omar_turi.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model_face_omar_turi.mlmodel; sourceTree = "<group>"; };
 		7938355E243FFB2A00C816AC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793835622440102C00C816AC /* UIcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
 		793835642440108A00C816AC /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		79673FFF244494C8005AB12A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7967400324449529005AB12A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		796740052444953A005AB12A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		798472472442D7FF008B9076 /* ThreeMitsu.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ThreeMitsu.mlmodel; path = ../../ThreeMitsu.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		793834F3243FE6D200C816AC = {
 			isa = PBXGroup;
 			children = (
+				7967400424449529005AB12A /* Localizable.strings */,
 				793834FE243FE6D200C816AC /* 3-MitsuPrevention */,
 				79383518243FE6D400C816AC /* 3-MitsuPreventionTests */,
 				79383523243FE6D400C816AC /* 3-MitsuPreventionUITests */,
@@ -118,8 +120,7 @@
 				793834FF243FE6D200C816AC /* AppDelegate.swift */,
 				79383546243FF05300C816AC /* SceneDelegate.swift */,
 				79383554243FF12E00C816AC /* FaceDetectionViewController.swift */,
-				7938355A243FF19000C816AC /* FaceRecognition.mlmodel */,
-				7938355C243FF19F00C816AC /* model_face_omar_turi.mlmodel */,
+				798472472442D7FF008B9076 /* ThreeMitsu.mlmodel */,
 				79383508243FE6D300C816AC /* Assets.xcassets */,
 				79383534243FE6FE00C816AC /* Main.storyboard */,
 				7938350D243FE6D300C816AC /* LaunchScreen.storyboard */,
@@ -252,6 +253,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 793834F3243FE6D200C816AC;
 			productRefGroup = 793834FD243FE6D200C816AC /* Products */;
@@ -270,10 +272,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7967400224449529005AB12A /* Localizable.strings in Resources */,
 				7938350F243FE6D300C816AC /* LaunchScreen.storyboard in Resources */,
 				7938350C243FE6D300C816AC /* Preview Assets.xcassets in Resources */,
 				79383509243FE6D300C816AC /* Assets.xcassets in Resources */,
-				7938355F243FFB2A00C816AC /* Info.plist in Resources */,
 				79383535243FE6FE00C816AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,12 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7938355B243FF19000C816AC /* FaceRecognition.mlmodel in Sources */,
 				79383537243FEF8C00C816AC /* VideoCapture.swift in Sources */,
 				79383500243FE6D200C816AC /* AppDelegate.swift in Sources */,
-				7938355D243FF19F00C816AC /* model_face_omar_turi.mlmodel in Sources */,
 				79383505243FE6D200C816AC /* __MitsuPrevention.xcdatamodeld in Sources */,
 				79383555243FF12E00C816AC /* FaceDetectionViewController.swift in Sources */,
+				798472482442D7FF008B9076 /* ThreeMitsu.mlmodel in Sources */,
 				79383547243FF05300C816AC /* SceneDelegate.swift in Sources */,
 				793835632440102D00C816AC /* UIcolor.swift in Sources */,
 				793835652440108A00C816AC /* DrawingBoundingBoxView.swift in Sources */,
@@ -347,8 +348,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				7938350E243FE6D300C816AC /* Base */,
+				79673FFF244494C8005AB12A /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7967400424449529005AB12A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7967400324449529005AB12A /* en */,
+				796740052444953A005AB12A /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -358,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -418,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -473,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"3-MitsuPrevention/Preview Content\"";
 				DEVELOPMENT_TEAM = PS62975MFX;
 				ENABLE_PREVIEWS = YES;
@@ -481,7 +495,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPrevention";
+				MARKETING_VERSION = 1.0.2;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.3MitsuPrevention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -493,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"3-MitsuPrevention/Preview Content\"";
 				DEVELOPMENT_TEAM = PS62975MFX;
 				ENABLE_PREVIEWS = YES;
@@ -501,7 +518,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.--MitsuPrevention";
+				MARKETING_VERSION = 1.0.2;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.3MitsuPrevention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

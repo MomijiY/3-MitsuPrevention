@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  3-MitsuPrevention
+
+  Created by 吉川椛 on 2020/04/13.
+  Copyright © 2020 com.litech. All rights reserved.
+*/
+"Safe" = "大丈夫です。";
+"Caution" = "間隔に気を付けましょう。";
+"Warning" = "気をつけましょう。";
+"Danger" = "退出することをお勧めします。";
+"Maximum danger" = "危険です。今すぐ退出を。";

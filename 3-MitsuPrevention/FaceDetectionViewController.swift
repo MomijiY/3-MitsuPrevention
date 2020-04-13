@@ -19,12 +19,13 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .orange
+        label.textColor = .systemTeal
         label.font = UIFont(name: "Avenir-Heavy", size: 30)
         label.text = "No face"
         return label
     }()
     
+    //0
     let blueAlertLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
@@ -32,21 +33,21 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemTeal
         label.font = UIFont(name: "Avenir-Heavy", size: 30)
-        label.text = "３密を避けています。"
+        label.text = "大丈夫です。"
         return label
     }()
-    
+    //1
     let greenAlertLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .green
-        label.font = UIFont(name: "Avenir-Heavy", size: 30)
-        label.text = "まだ大丈夫です。"
+        label.font = UIFont(name: "Avenir-Heavy", size: 25)
+        label.text = "間隔に気を付けましょう。"
         return label
     }()
-    
+    //2
     let yellowAlertLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
@@ -57,30 +58,30 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
         label.text = "気をつけましょう。"
         return label
     }()
-    
+    //4
     let orangeAlertLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .orange
-        label.font = UIFont(name: "Avenir-Heavy", size: 20)
-        label.text = "相手の人と間隔をあけ\n長居しないようにしましょう。"
+        label.font = UIFont(name: "Avenir-Heavy", size: 25)
+        label.text = "退出することをお勧めします。"
         label.numberOfLines = 2
         return label
     }()
-    
+    //6
     let pinkAlertLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemPink
-        label.font = UIFont(name: "Avenir-Heavy", size: 30)
-        label.text = "できれば退出しましょう。"
+        label.font = UIFont(name: "Avenir-Heavy", size: 25)
+        label.text = "退出することをお勧めします。"
         return label
     }()
-    
+    //8
     let redAlertLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
@@ -88,7 +89,7 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .red
         label.font = UIFont(name: "Avenir-Heavy", size: 25)
-        label.text = "すぐに退出することを\nお勧めします。"
+        label.text = "危険です。今すぐ退出を。"
         label.numberOfLines = 2
         return label
     }()
@@ -104,20 +105,44 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNeedsStatusBarAppearanceUpdate()
 //        setupTabBar()
         setupCamera()
         setupLabel()
+        let Safe = NSLocalizedString("Safe", comment: "")
+        let Caution = NSLocalizedString("Caution", comment: "")
+        let Warning = NSLocalizedString("Warning", comment: "")
+        let Danger = NSLocalizedString("Danger", comment: "")
+        let Maximumdanger = NSLocalizedString("Maximum danger", comment: "")
+        
+        print(Safe)
+        print(Caution)
+        print(Warning)
+        print(Danger)
+        print(Maximumdanger)
+        
+        self.blueAlertLabel.text = Safe
+        self.greenAlertLabel.text = Caution
+        self.yellowAlertLabel.text = Warning
+        self.orangeAlertLabel.text = Danger
+        self.redAlertLabel.text = Maximumdanger
 //        setupButton()
+    }
+    override var prefersStatusBarHidden: Bool {
+      return true
     }
     @objc func pushButton(sender: UIButton){
         print("button pushed.")
     }
     
     fileprivate func setupCamera() {
+        //デバイスからの入力と出力を管理するオブジェクトの作成
         let captureSession = AVCaptureSession()
+        //画質
         captureSession.sessionPreset = .high
         
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+        //リアルタイムキャプチャー
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
         captureSession.addInput(input)
         
@@ -192,6 +217,7 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
 //        toHomeButton.frame = CGRect(x: 50, y: 0, width: screenWidth/4, height: 50)
     }
     
+    //1フレームごとの処理
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
@@ -206,11 +232,17 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
             DispatchQueue.main.async {
                 if let results = req.results {
                     self.numberOfFaces.text = "\(results.count) face(s)"
-                    var populationDensity: CGSize = CGSize(results.count)/mainBoundSize
+//                    var populationDensity: Float = Float(results.count)/Float((self.mainBoundSize.width*self.mainBoundSize.height))
+//                    print(populationDensity)
+//                    var populationDensity: CGSize = CGSize(results.count)/mainBoundSize
                     if self.numberOfFaces.text == "1 face(s)" {
                         self.numberOfFaces.text = "\(results.count) face"
                     }
-                    if results.count <= 5 {
+                    if self.numberOfFaces.text == "0 face(s)" {
+                        self.numberOfFaces.text = "No face"
+                    }
+                    if results.count == 0 {
+                        self.numberOfFaces.textColor = UIColor.systemTeal
                         self.blueAlertLabel.isHidden = false
                         self.greenAlertLabel.isHidden = true
                         self.yellowAlertLabel.isHidden = true
@@ -218,7 +250,8 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
                         self.pinkAlertLabel.isHidden = true
                         self.redAlertLabel.isHidden = true
                     }
-                    if results.count >= 5 {
+                    if results.count >= 1 {
+                        self.numberOfFaces.textColor = UIColor.green
                         self.blueAlertLabel.isHidden = true
                         self.greenAlertLabel.isHidden = false
                         self.yellowAlertLabel.isHidden = true
@@ -226,7 +259,8 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
                         self.pinkAlertLabel.isHidden = true
                         self.redAlertLabel.isHidden = true
                     }
-                    if results.count >= 10 {
+                    if results.count >= 2 {
+                        self.numberOfFaces.textColor = UIColor.yellow
                         self.blueAlertLabel.isHidden = true
                         self.greenAlertLabel.isHidden = true
                         self.yellowAlertLabel.isHidden = false
@@ -234,7 +268,8 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
                         self.pinkAlertLabel.isHidden = true
                         self.redAlertLabel.isHidden = true
                     }
-                    if results.count >= 15 {
+                    if results.count >= 4 {
+                        self.numberOfFaces.textColor = UIColor.orange
                         self.blueAlertLabel.isHidden = true
                         self.greenAlertLabel.isHidden = true
                         self.yellowAlertLabel.isHidden = true
@@ -242,7 +277,8 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
                         self.pinkAlertLabel.isHidden = true
                         self.redAlertLabel.isHidden = true
                     }
-                    if results.count >= 20 {
+                    if results.count >= 6 {
+                        self.numberOfFaces.textColor = UIColor.systemPink
                         self.blueAlertLabel.isHidden = true
                         self.greenAlertLabel.isHidden = true
                         self.yellowAlertLabel.isHidden = true
@@ -250,7 +286,8 @@ class FaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSam
                         self.pinkAlertLabel.isHidden = false
                         self.redAlertLabel.isHidden = true
                     }
-                    if results.count >= 30 {
+                    if results.count >= 8 {
+                        self.numberOfFaces.textColor = UIColor.red
                         self.blueAlertLabel.isHidden = true
                         self.greenAlertLabel.isHidden = true
                         self.yellowAlertLabel.isHidden = true
